@@ -1,0 +1,4 @@
+name: soloPortalFarms
+version: '${project.version}'
+main: org.delenomes.soloportalfarms
+api-version: '1.20'
