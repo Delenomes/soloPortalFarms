@@ -1,0 +1,5 @@
+enable-blacklist: true
+blacklisted-mobs:
+  - "SKELETON"
+  - "ZOMBIE"
+  - "ZOMBIFIED_PIGLIN"
