@@ -22,8 +22,7 @@ public final class soloportalfarms extends JavaPlugin implements Listener {
 
     @EventHandler
     public void onEntityPortalEntry(EntityPortalEnterEvent event){
-        if (event.getEntity() instanceof LivingEntity) {
-            LivingEntity living = (LivingEntity) event.getEntity();
+        if (event.getEntity() instanceof LivingEntity living) {
             if (getConfig().getBoolean("enable-blacklist")){
                 List<String> mobs = getConfig().getStringList("blacklisted-mobs");
                 for (String mob : mobs){
@@ -31,10 +30,8 @@ public final class soloportalfarms extends JavaPlugin implements Listener {
                     if (event.getEntityType() == EntityType.valueOf(mob)){
                         return;
                     }
-                    else{
-                        living.setRemoveWhenFarAway(false);
-                    }
                 }
+                living.setRemoveWhenFarAway(false);
             }
             else {
                 living.setRemoveWhenFarAway(false);
