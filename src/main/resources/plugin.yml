@@ -1,4 +1,13 @@
 name: soloPortalFarms
-version: '${project.version}'
+version: '1.2'
 main: org.delenomes.soloportalfarms
-api-version: '1.20'
+api-version: '1.21'
+commands:
+  spf:
+    description: blacklist control commands. Use addmob or removemob arguments
+    permission: spf.admin
+    permission-message: You arent WORTHY
+permissions:
+  spf.admin:
+    description: Allows control over plugin config blacklist via commands
+    default: op
